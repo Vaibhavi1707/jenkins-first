@@ -7,9 +7,15 @@ pipeline {
       }
     }
 
-    stage('Build') {
+    stage('Log') {
       steps {
         sh 'python3 hello.py'
+      }
+    }
+
+    stage('Build') {
+      steps {
+        sh 'echo "Build"'
       }
     }
 
